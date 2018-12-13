@@ -1,0 +1,6 @@
+pyobjc
+playsound
+pyaudio
+soundmeter --allow-all-external --allow-unverified pyaudio
+yeelight
+flask
