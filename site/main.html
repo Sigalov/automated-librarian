@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <div>
+            <div>
+                <h2>AUTO LIBRARIAN</h2>
+				<button id="start_dry_btn">Start Dry Run</button>
+				<script type="text/javascript">
+				    document.getElementById("start_dry_btn").onclick = function () {
+				        location.href='http://0.0.0.0:5000/monitor?monitor_type=1';
+				        
+					for (var i = 1; i < 3; i++) {
+						sleep(2)
+						<!--document.getElementById("rms_treshold").innerHTML = location.href = "http://0.0.0.0:5000/return_rms_average"'  -->
+					    alert(location.href = "http://0.0.0.0:5000/return_rms_average");
+					}  				        
+				    };
+				    
+				</script>                
+                
+				<button id="start_live_btn">Start Live Demo</button>
+				<script type="text/javascript">
+				    document.getElementById("start_live_btn").onclick = function () {
+				        location.href = "http://0.0.0.0:5000/monitor?rms_th=" + document.getElementById("rms_treshold").value;
+				    };
+				</script>
+				
+				<button onclick="location.href='http://0.0.0.0:5000/stop'" type="button">Stop</button>
+            </div>
+            <div>
+            RMS Threshold: <input type="text" id="rms_treshold" value="300">
+            </div>
+       
+        </div>
+    </body>
+</html>
+
